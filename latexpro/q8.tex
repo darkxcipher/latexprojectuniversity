@@ -20,5 +20,16 @@ $\dfrac{\partial^2 u}{\partial x^2}+\dfrac{\partial^2 u}{\partial y^2}=0$ at the
 
 \noindent[Take 2 iterations and obtain the result correct up to three decimal places.]
 \begin{comment}
+	
+	
+	multirow provides \multirow{2}{*}{Seasons}, which makes the “Seasons” cell span two rows. The * means the cell takes its natural width.
+	array provides the m{width} column type, a fixed-width column whose content is vertically centred. It also provides *{n}{...} for repeating column specs. Many LaTeX distributions load it automatically when tabular is used, but it’s safest to include it.
+	
+	Commands built into LaTeX (no package needed):
+	\multicolumn{5}{|c|}{Sales Data} merges 5 columns into one centred cell, and the | keeps the borders.
+	\hline draws a full-width horizontal line.
+	\cline{2-5} draws a line only under columns 2 to 5, so it leaves the “Seasons” cell open.
+	
+	--------------------
 \end{comment}
 \end{document}
