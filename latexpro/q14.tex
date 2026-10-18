@@ -1,0 +1,36 @@
+\documentclass{article}
+\usepackage{amsmath}
+\title{Existence and Uniqueness of Solutions of the Second Order Differential Equations}
+\author{Nikhil S Sulghur\\Mumbai University}
+\date{\today}
+
+\begin{document}
+	\maketitle
+	
+	\begin{abstract}
+		We study the existence and uniqueness of solutions of second order differential equations. We state the Picard--Lindel\"of type result for the initial value problem and give a simple example.
+	\end{abstract}
+	
+	\section{Introduction}
+	Second order differential equations arise in many problems of physics and engineering. A basic question is whether a solution exists and whether it is unique; see Tsamatos and Ntouyas \cite{TN} for boundary value problems of this type.
+	
+	\section{Preliminaries}
+	Consider the initial value problem
+	\[
+	y''=f(x,y,y'),\quad y(x_0)=y_0,\quad y'(x_0)=y_1.
+	\]
+	Setting $z=y'$ turns it into a first order system, so results for systems can be used.
+	
+	\section{Main Result}
+	\textbf{Theorem.} If $f$ is continuous and Lipschitz continuous in $y$ and $y'$ on a rectangle around $(x_0,y_0,y_1)$, then the problem has a unique solution on some interval around $x_0$.
+	
+	\section{Example}
+	For $y''+y=0$ with $y(0)=0$ and $y'(0)=1$, the function $f$ is linear, so the theorem applies. The unique solution is $y=\sin x$.
+	
+	\section{Conclusion}
+	Under a Lipschitz condition the initial value problem for a second order equation has exactly one solution. This idea extends to more general boundary value problems.
+	
+	\begin{thebibliography}{9}
+		\bibitem{TN} P. Ch. Tsamatos and S. K. Ntouyas, Existence and uniqueness of solutions of a general type boundary-value problem for 2nd-order functional-differential equations, \emph{J. Math. Anal. Appl.}, Elsevier, 1993.
+	\end{thebibliography}
+\end{document}

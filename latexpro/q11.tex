@@ -1,0 +1,47 @@
+\documentclass{article}
+\usepackage{fancyhdr}
+
+%% =====================================================================
+%% USE OF THE fancyhdr PACKAGE
+%% By default LaTeX prints only a page number (in the footer or header,
+%% depending on the class). The fancyhdr package lets you control what is
+%% printed in the header (top of page) and footer (bottom of page).
+%%
+%% Each of header and footer has three positions: Left, Centre, Right.
+%% Commands (used inside \fancyhf, \fancyhead, \fancyfoot):
+%%   \pagestyle{fancy}   : turns on the fancyhdr style for the whole document.
+%%   \fancyhf{}          : clears all existing header and footer fields.
+%%                         Always use it first, to start from a blank layout.
+%%   \fancyhead[L]{..}   : left header      \fancyhead[C]{..} : centre header
+%%   \fancyhead[R]{..}   : right header
+%%   \fancyfoot[L]{..}   : left footer      \fancyfoot[C]{..} : centre footer
+%%   \fancyfoot[R]{..}   : right footer
+%%   \thepage            : prints the current page number.
+%%   \leftmark / \rightmark : print the current chapter / section title.
+%%   \renewcommand{\headrulewidth}{0.4pt} : thickness of the line under the
+%%                         header (0pt removes it).
+%%   \renewcommand{\footrulewidth}{0.4pt} : thickness of the line above the
+%%                         footer (0pt by default, so no line).
+%%   \setlength{\headheight}{14pt} : height reserved for the header; set it
+%%                         if LaTeX warns that the header is too small.
+%% For two-sided documents (book/report with twoside), use E and O in the
+%% brackets for even and odd pages, e.g. \fancyhead[LE,RO]{..}.
+%% =====================================================================
+
+\pagestyle{fancy}
+\fancyhf{}                                  % clear everything first
+\fancyhead[L]{Research Methodology}         % header, left
+\fancyhead[R]{Nikhil S Sulghur}             % header, right
+\fancyfoot[L]{Mumbai University}            % footer, left
+\fancyfoot[R]{Page \thepage}                % footer, right
+\renewcommand{\headrulewidth}{0.4pt}        % line under header
+\renewcommand{\footrulewidth}{0.4pt}        % line above footer
+\setlength{\headheight}{14pt}
+
+\begin{document}
+	\section{Introduction}
+	This is the first page. The header and footer set above appear on every page.
+	\newpage
+	\section{Next Section}
+	This is the second page, showing the page number change in the footer.
+\end{document}

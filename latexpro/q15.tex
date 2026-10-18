@@ -1,0 +1,60 @@
+\documentclass{article}
+\usepackage{fancyhdr}
+
+%% =====================================================================
+%% 1. DISPLAYING THE PAGE NUMBER IN THE HEADER OR FOOTER
+%% LaTeX stores the current page number in a counter called "page".
+%% The command \thepage prints its value, so it can be placed anywhere.
+%%
+%% (a) Built-in page styles (set with \pagestyle{..} for the whole document):
+%%     plain       : page number centred in the footer (default for article).
+%%     headings    : page number and section title in the header.
+%%     myheadings  : page number in the header; the heading text is set by hand
+%%                   with \markright{..} or \markboth{..}{..}.
+%%     empty       : no header and no footer (no page number).
+%%   \thispagestyle{..} changes the style of the current page only,
+%%   e.g. \thispagestyle{empty} on a title page.
+%%
+%% (b) Full control with the fancyhdr package:
+%%     \pagestyle{fancy}  turns it on, \fancyhf{} clears the default fields.
+%%     Then put \thepage in any of the six positions:
+%%       \fancyhead[L]{..}  \fancyhead[C]{..}  \fancyhead[R]{..}   (header)
+%%       \fancyfoot[L]{..}  \fancyfoot[C]{..}  \fancyfoot[R]{..}   (footer)
+%%     e.g. \fancyhead[R]{\thepage}  puts the number at the top right.
+%%     \fancyfoot[C]{Page \thepage}  prints "Page n" at the bottom centre.
+%%
+%% 2. CHANGING THE FORMAT OF THE PAGE NUMBER
+%%   \pagenumbering{arabic}  : 1, 2, 3, ...   (default)
+%%   \pagenumbering{roman}   : i, ii, iii, ...
+%%   \pagenumbering{Roman}   : I, II, III, ...
+%%   \pagenumbering{alph}    : a, b, c, ...   \pagenumbering{Alph} : A, B, C, ...
+%%
+%% 3. RESETTING THE PAGE NUMBER TO A NEW VALUE
+%%   (a) \pagenumbering{style} always restarts the numbering from 1, so it is
+%%       used when the format changes (e.g. roman preface, then arabic text).
+%%   (b) \setcounter{page}{n} sets the page number to any value n. Use it at
+%%       the start of the page that should receive the number n (the number
+%%       printed on that page becomes n, and later pages continue from n).
+%% =====================================================================
+
+\pagestyle{fancy}
+\fancyhf{}                         % clear header and footer
+\fancyhead[R]{\thepage}            % page number in header, right
+\fancyfoot[C]{Page \thepage}       % page number in footer, centre
+\setlength{\headheight}{14pt}
+
+\begin{document}
+	\pagenumbering{roman}              % front matter: i, ii, ...
+	\section*{Preface}
+	This page is numbered i.
+	
+	\newpage
+	\pagenumbering{arabic}             % restarts numbering at 1
+	\section{Introduction}
+	This page is numbered 1.
+	
+	\newpage
+	\setcounter{page}{10}              % this page is now numbered 10
+	\section{Main Content}
+	This page is numbered 10, and the next page will be 11.
+\end{document}

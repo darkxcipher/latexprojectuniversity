@@ -1,0 +1,61 @@
+\documentclass[12pt]{report}
+\usepackage{makeidx}
+\makeindex
+\newcommand{\txt}[1]{#1 This topic is discussed in Rudin~\cite{R} and forms a basic part of real analysis.}
+
+\title{Research in Mathematics:\\Real Analysis}
+\author{Nikhil S Sulghur}
+\date{\today}
+
+\begin{document}
+	\maketitle
+	
+	\chapter*{Declaration}
+	I hereby declare that this project report is my own work and has not been submitted to any other university or institution for any degree or diploma. All sources used are acknowledged in the bibliography.
+	
+	\chapter*{Acknowledgement}
+	I express my sincere gratitude to the Department of Mathematics, Mumbai University, for giving me this opportunity. I also thank my teachers and friends for their constant guidance and support.
+	
+	\tableofcontents
+	
+	\chapter{Number Systems}
+	\section{Introduction}
+	\txt{This chapter introduces the real number system\index{real numbers}.}
+	\section{Main Content}
+	\txt{We study ordered sets\index{ordered set} and the least upper bound property.}
+	\section{Examples}
+	\txt{The rational numbers\index{rational numbers} do not have this property.}
+	
+	\chapter{Basic Topology}
+	\section{Introduction}
+	\txt{This chapter introduces metric spaces\index{metric space}.}
+	\section{Main Content}
+	\txt{We study open sets and compact sets\index{compact set}.}
+	\section{Examples}
+	\txt{Closed and bounded intervals are compact subsets of the real line.}
+	
+	\chapter{Sequences and Series}
+	\section{Introduction}
+	\txt{This chapter introduces numerical sequences\index{sequence}.}
+	\section{Main Content}
+	\txt{We study convergence and Cauchy sequences\index{Cauchy sequence}.}
+	\section{Examples}
+	\txt{The sequence $1/n$ converges to zero.}
+	
+	\chapter{Continuity}
+	\section{Introduction}
+	\txt{This chapter introduces limits of functions\index{limit}.}
+	\section{Main Content}
+	\txt{We study continuous functions\index{continuity} on metric spaces.}
+	\section{Examples}
+	\txt{Polynomial functions are continuous on the whole real line.}
+	
+	\chapter{Conclusion}
+	In this report we studied the basic ideas of real analysis, namely number systems, topology, sequences and continuity, following Rudin~\cite{R}. These ideas form the foundation for further study of differentiation and integration.
+	
+	\begin{thebibliography}{9}
+		\bibitem{R} W. Rudin, \emph{Principles of Mathematical Analysis}, 3rd ed., McGraw-Hill, 1976.
+	\end{thebibliography}
+	
+	\printindex
+\end{document}

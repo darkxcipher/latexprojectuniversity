@@ -1,0 +1,107 @@
+\documentclass{article}
+\usepackage{xcolor}
+\begin{document}
+	
+	%% =====================================================================
+	%% (a) TEXT STYLE AND EMPHASIS
+	%% These commands change how characters look (shape, weight, family, colour).
+	%% Each has two forms:
+	%%   - command form  \textbf{text}  : affects only the text in the braces (preferred)
+	%%   - switch form   {\bfseries text} : affects everything after it, inside the group
+	%%
+	%%  \textbf{..}  / \bfseries  : bold weight, used for headings and key terms.
+	%%  \textit{..}  / \itshape   : italic shape, used for titles of books, foreign words.
+	%%  \textsl{..}  / \slshape   : slanted shape (upright letters tilted).
+	%%  \textsc{..}  / \scshape   : SMALL CAPS, used for names and abbreviations.
+	%%  \texttt{..}  / \ttfamily  : typewriter (monospace) family, used for code.
+	%%  \textsf{..}  / \sffamily  : sans-serif family.
+	%%  \underline{..}            : underlines the text.
+	%%  \emph{..}                 : logical emphasis. Normally gives italics, but inside
+	%%                              italic text it switches back to upright, so it is
+	%%                              safer than \textit for stressing a word.
+	%%  \textcolor{colour}{..}    : coloured text; needs the xcolor package.
+	%% Styles can be combined by nesting, e.g. \textbf{\textit{bold italic}}.
+	%% =====================================================================
+	\section*{(a) Text style and emphasis}
+	\textbf{Bold}, \textit{italic}, \textsc{small caps}, \texttt{typewriter}, \underline{underlined}, \emph{emphasised}, \textcolor{red}{red}.
+	
+	%% =====================================================================
+	%% (b) TEXT SIZING (smallest to largest)
+	%% LaTeX has ten size commands. Their actual point size depends on the document
+	%% class and its base size option (10pt, 11pt, 12pt). In order:
+	%%   \tiny  <  \scriptsize  <  \footnotesize  <  \small  <  \normalsize
+	%%   <  \large  <  \Large  <  \LARGE  <  \huge  <  \Huge
+	%% \normalsize is the default body size.
+	%% These are switches: they change all text that follows. To limit the effect,
+	%% put the command and the text together inside braces { }, or inside an
+	%% environment, so the size returns to normal at the closing brace.
+	%% =====================================================================
+	\section*{(b) Text sizing}
+	{\tiny tiny} {\scriptsize scriptsize} {\footnotesize footnotesize} {\small small} {\normalsize normalsize} {\large large} {\Large Large} {\LARGE LARGE} {\huge huge} {\Huge Huge}
+	
+	%% =====================================================================
+	%% (c) PARAGRAPH ALIGNMENT AND ENVIRONMENTS
+	%% By default LaTeX justifies text (both margins straight). An environment
+	%% \begin{name} ... \end{name} applies a setting to the text inside it only.
+	%%   center      : centres every line; used for titles, figures, tables.
+	%%   flushleft   : aligns to the left margin, right edge ragged.
+	%%   flushright  : aligns to the right margin, left edge ragged.
+	%%   quote       : indented block for short quotations.
+	%%   quotation   : indented block for longer quotations, with paragraph indents.
+	%%   verbatim    : prints the text exactly as typed, in typewriter font; used for code.
+	%% Paragraph and line breaks:
+	%%   blank line or \par : starts a new paragraph (with first-line indent).
+	%%   \\ or \newline     : breaks the line without starting a new paragraph.
+	%%   \noindent          : removes the indent of the next paragraph.
+	%% Inline switches \centering, \raggedright, \raggedleft do the same as the
+	%% environments but are used inside other structures like tables and boxes.
+	%% =====================================================================
+	\section*{(c) Paragraph alignment and environments}
+	\begin{center} This line is centred. \end{center}
+	\begin{flushleft} This line is left aligned. \end{flushleft}
+	\begin{flushright} This line is right aligned. \end{flushright}
+	
+	%% =====================================================================
+	%% (d) DOCUMENT STRUCTURE
+	%% Every LaTeX file has a preamble (before \begin{document}) and a body.
+		%%   \documentclass{..}   : first line; sets the type: article, report, book,
+		%%                          letter, beamer. Options go in [ ], e.g. [12pt,a4paper].
+		%%   \usepackage{..}      : loads extra features (amsmath, tikz, xcolor, ...).
+		%%   \title{..} \author{..} \date{..} then \maketitle : build the title block.
+		%%   \begin{document} ... \end{document} : everything printed goes between these.
+		%% Sectioning commands divide the text and number it automatically:
+		%%   \part, \chapter (report and book only), \section, \subsection,
+		%%   \subsubsection, \paragraph.
+		%%   Adding a star (\section*{..}) removes the number and the contents entry.
+		%% Other structural tools:
+		%%   \tableofcontents     : builds the contents page; compile twice.
+		%%   \begin{abstract}..   : short summary at the start (article, report).
+			%%   \label{..} and \ref{..} : cross-refer to a numbered section, equation or figure.
+			%% =====================================================================
+			\section*{(d) Document structure}
+			\subsection*{A subsection}
+			\subsubsection*{A subsubsection}
+			This page uses \verb|\documentclass|, \verb|\usepackage|, \verb|\section*| and the \verb|document| environment.
+			
+			%% =====================================================================
+			%% (e) LISTS AND LAYOUT
+			%% Lists (each entry begins with \item; lists can be nested):
+			%%   itemize     : bulleted list.
+			%%   enumerate   : numbered list (1., 2., ...).
+			%%   description : list of terms in bold, each followed by its meaning: \item[term].
+			%% Layout commands:
+			%%   \newpage, \clearpage : start a new page.
+			%%   \vspace{..}, \hspace{..} : insert vertical or horizontal space.
+			%%   \hrule               : draws a horizontal line.
+			%%   \hfill               : stretchable space; pushes text to the right.
+			%%   \begin{minipage}{width}..\end{minipage} : box of fixed width.
+			%%   \begin{multicols}{n} : n text columns (needs the multicol package).
+				%%   \usepackage{geometry} : sets page margins and size.
+				%% =====================================================================
+				\section*{(e) Lists and layout}
+				\begin{itemize} \item Apple \item Mango \end{itemize}
+				\begin{enumerate} \item First \item Second \end{enumerate}
+				%\begin{description} \item[LaTeX] A document preparation system. \end{description}
+				\vspace{5mm}\hrule
+				
+			\end{document}

@@ -1,0 +1,41 @@
+\documentclass{article}
+\begin{document}
+	
+	%% =====================================================================
+	%% DIFFERENCE BETWEEN THE itemize AND enumerate ENVIRONMENTS
+	%%
+	%% Both create lists. Each entry begins with \item, and each list is
+	%% opened with \begin{..} and closed with \end{..}.
+	%%
+	%% itemize   : UNORDERED list. Every entry is marked with a bullet symbol
+	%%             (a bullet, dash, asterisk, ... depending on nesting level).
+	%%             Use it when the order of the items does not matter.
+	%%
+	%% enumerate : ORDERED list. Entries are numbered automatically
+	%%             (1., 2., 3., ...). Use it when the order matters, e.g. steps,
+	%%             or when items must be referred to by number.
+	%%             The numbers update by themselves when items are added or removed.
+	%%
+	%% Similarities and further points:
+	%%   - Both can be nested up to four levels. The labels change with the level:
+	%%       itemize   : bullet, dash, asterisk, centred dot
+	%%       enumerate : 1., (a), i., A.
+	%%   - The label of any item can be changed by hand with \item[label].
+	%%   - Both labels can be customised with the enumitem or enumerate packages,
+	%%     e.g. \begin{enumerate}[(a)] gives (a), (b), ...
+		%%   - A third list type, description, has bold terms as labels: \item[term].
+		%% =====================================================================
+		
+		\textbf{Itemize (bullets):}
+		\begin{itemize}
+			\item Apple
+			\item Mango
+		\end{itemize}
+		
+		\textbf{Enumerate (numbers):}
+		\begin{enumerate}
+			\item Apple
+			\item Mango
+		\end{enumerate}
+		
+	\end{document}

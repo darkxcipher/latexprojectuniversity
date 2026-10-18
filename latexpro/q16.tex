@@ -1,0 +1,53 @@
+\documentclass{article}
+\usepackage{graphicx}
+
+%% =====================================================================
+%% HOW TO INSERT FIGURES IN A LaTeX DOCUMENT
+%%
+%% 1. LOAD THE PACKAGE
+%%    \usepackage{graphicx} in the preamble. It provides \includegraphics.
+%%
+%% 2. SUPPORTED IMAGE FORMATS
+%%    With pdflatex: PNG, JPG/JPEG and PDF. (EPS needs conversion, or latex+dvips.)
+%%    Put the image in the same folder as the .tex file (or upload it in Overleaf).
+%%
+%% 3. THE BASIC COMMAND
+%%    \includegraphics[options]{filename}
+%%    The extension may be left out. Common options:
+%%      width=0.5\textwidth : width as a fraction of the text width (height scales)
+%%      height=5cm          : fixed height
+%%      scale=0.5           : scale factor
+%%      angle=90            : rotate by 90 degrees
+%%    Use only one of width/height unless you want the picture distorted.
+%%
+%% 4. THE figure ENVIRONMENT (floating figure with caption and label)
+%%    \begin{figure}[placement] ... \end{figure}
+%%    Placement: h = here, t = top of page, b = bottom, p = separate page,
+%%               ! = override restrictions. [htbp] tells LaTeX to try them in order.
+%%               [H] (float package) forces the exact position.
+%%    Inside it:
+%%      \centering      : centres the picture
+%%      \includegraphics: inserts the picture
+%%      \caption{..}    : numbered caption ("Figure 1: ...")
+%%      \label{..}      : name for cross-reference; place it AFTER \caption
+%%    Refer to the figure in the text with Figure~\ref{fig:name} (compile twice).
+%%
+%% 5. OTHER WAYS
+%%    - Side by side: put two \includegraphics (each width=0.45\textwidth) in
+%%      one figure, or use the subcaption package for sub-figures (a), (b).
+%%    - \listoffigures prints a list of all figures with page numbers.
+%%    - Drawn figures can be made directly with the tikz package.
+%% =====================================================================
+
+\begin{document}
+	
+	Figure~\ref{fig:sample} shows an inserted picture.
+	
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=0.5\textwidth]{example-image}  % replace with your file, e.g. photo.png
+		\caption{A sample figure}
+		\label{fig:sample}
+	\end{figure}
+	
+\end{document}

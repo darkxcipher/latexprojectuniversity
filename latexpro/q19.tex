@@ -1,0 +1,15 @@
+\documentclass{article}
+\usepackage{tikz}
+\begin{document}
+	\begin{tikzpicture}[level distance=15mm,
+		level 1/.style={sibling distance=40mm},
+		level 2/.style={sibling distance=20mm}]
+		\node {India}
+		child {node {Maharashtra}
+			child {node {Mumbai}}
+			child {node {Pune}}}
+		child {node {West Bengal}
+			child {node {Kolkotta}}
+			child {node {dum dum}}};
+	\end{tikzpicture}
+\end{document}
