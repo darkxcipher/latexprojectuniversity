@@ -1,0 +1,61 @@
+\documentclass[12pt]{report}
+\usepackage{amsmath,makeidx}
+\makeindex
+\newcommand{\txt}[1]{#1 This topic is discussed in Rosen~\cite{R} and forms a basic part of discrete mathematics.}
+
+\title{Research in Mathematics:\\Discrete Mathematics}
+\author{firstname lastname}
+\date{\today}
+
+\begin{document}
+	\maketitle
+	
+	\chapter*{Declaration}
+	I hereby declare that this project report is my own work and has not been submitted to any other university or institution for any degree or diploma. All sources used are acknowledged in the bibliography.
+	
+	\chapter*{Acknowledgement}
+	I express my sincere gratitude to the Department of Mathematics, Mumbai University, for giving me this opportunity. I also thank my teachers and friends for their constant guidance and support.
+	
+	\tableofcontents
+	
+	\chapter{Logic and Sets}
+	\section{Introduction}
+	\txt{This chapter introduces propositional logic\index{propositional logic}.}
+	\section{Main Content}
+	\txt{We study logical connectives, truth tables and sets\index{set}.}
+	\section{Examples}
+	\txt{The statement $p\rightarrow q$ is false only when $p$ is true and $q$ is false.}
+	
+	\chapter{Relations and Functions}
+	\section{Introduction}
+	\txt{This chapter introduces relations\index{relation} on a set.}
+	\section{Main Content}
+	\txt{We study equivalence relations\index{equivalence relation} and functions.}
+	\section{Examples}
+	\txt{Congruence modulo $n$ is an equivalence relation on the integers.}
+	
+	\chapter{Counting and Combinatorics}
+	\section{Introduction}
+	\txt{This chapter introduces the basic principles of counting\index{counting}.}
+	\section{Main Content}
+	\txt{We study permutations\index{permutation} and combinations\index{combination}.}
+	\section{Examples}
+	\txt{The number of ways to choose $r$ objects from $n$ is $\binom{n}{r}$.}
+	
+	\chapter{Graph Theory}
+	\section{Introduction}
+	\txt{This chapter introduces graphs\index{graph} and their basic properties.}
+	\section{Main Content}
+	\txt{We study degrees, paths and trees\index{tree}.}
+	\section{Examples}
+	\txt{A tree with $n$ vertices has exactly $n-1$ edges.}
+	
+	\chapter{Conclusion}
+	In this report we studied the basic ideas of discrete mathematics, namely logic, relations, counting and graphs, following Rosen~\cite{R}. These ideas form the foundation for further study in computer science and combinatorics.
+	
+	\begin{thebibliography}{9}
+		\bibitem{R} K. H. Rosen, \emph{Discrete Mathematics and Its Applications}, McGraw-Hill.
+	\end{thebibliography}
+	
+	\printindex
+\end{document}

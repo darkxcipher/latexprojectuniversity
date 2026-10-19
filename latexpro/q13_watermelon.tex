@@ -1,0 +1,61 @@
+\documentclass[12pt]{report}
+\usepackage{amsmath,makeidx}
+\makeindex
+\newcommand{\txt}[1]{#1 This topic is discussed in Niven et al.~\cite{N} and forms a basic part of number theory.}
+
+\title{Research in Mathematics:\\Number Theory}
+\author{Firstname Lastname}
+\date{\today}
+
+\begin{document}
+	\maketitle
+	
+	\chapter*{Declaration}
+	I hereby declare that this project report is my own work and has not been submitted to any other university or institution for any degree or diploma. All sources used are acknowledged in the bibliography.
+	
+	\chapter*{Acknowledgement}
+	I express my sincere gratitude to the Department of Mathematics, Mumbai University, for giving me this opportunity. I also thank my teachers and friends for their constant guidance and support.
+	
+	\tableofcontents
+	
+	\chapter{Divisibility}
+	\section{Introduction}
+	\txt{This chapter introduces divisibility\index{divisibility} of integers.}
+	\section{Main Content}
+	\txt{We study the division algorithm and the greatest common divisor\index{greatest common divisor}.}
+	\section{Examples}
+	\txt{The greatest common divisor of $12$ and $18$ is $6$.}
+	
+	\chapter{Prime Numbers}
+	\section{Introduction}
+	\txt{This chapter introduces prime numbers\index{prime number}.}
+	\section{Main Content}
+	\txt{We study the fundamental theorem of arithmetic\index{fundamental theorem of arithmetic}.}
+	\section{Examples}
+	\txt{The number $60$ factors uniquely as $2^2\cdot 3\cdot 5$.}
+	
+	\chapter{Congruences}
+	\section{Introduction}
+	\txt{This chapter introduces congruences\index{congruence} modulo $n$.}
+	\section{Main Content}
+	\txt{We study linear congruences and the Chinese remainder theorem\index{Chinese remainder theorem}.}
+	\section{Examples}
+	\txt{Since $17-5=12$, we have $17\equiv 5 \pmod 6$.}
+	
+	\chapter{Arithmetic Functions}
+	\section{Introduction}
+	\txt{This chapter introduces Euler's function\index{Euler's function} $\varphi(n)$.}
+	\section{Main Content}
+	\txt{We study Fermat's little theorem\index{Fermat's little theorem} and Euler's theorem.}
+	\section{Examples}
+	\txt{For a prime $p$, we have $\varphi(p)=p-1$.}
+	
+	\chapter{Conclusion}
+	In this report we studied the basic ideas of number theory, namely divisibility, primes, congruences and arithmetic functions, following Niven et al.~\cite{N}. These ideas form the foundation for further study in cryptography and algebraic number theory.
+	
+	\begin{thebibliography}{9}
+		\bibitem{N} I. Niven, H. S. Zuckerman and H. L. Montgomery, \emph{An Introduction to the Theory of Numbers}, Wiley.
+	\end{thebibliography}
+	
+	\printindex
+\end{document}
